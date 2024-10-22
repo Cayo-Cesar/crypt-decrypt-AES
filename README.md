@@ -21,7 +21,7 @@ Este projeto visa explorar a cifragem e decifragem utilizando o algoritmo AES (A
 
 1. Clone o repositório:
     ```sh
-    git clone https://github.com/seuusuario/crypt-decrypt-AES.git
+    git clone https://github.com/Cayo-Cesar/crypt-decrypt-AES.git
     ```
 2. Navegue até o diretório do projeto:
     ```sh
