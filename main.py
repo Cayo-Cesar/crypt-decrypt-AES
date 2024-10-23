@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 from encrypt_decrypt import aes_menu
+from generator_keys import keygen_menu
+from rsa import rsa_menu
 
 def main_menu():
     root = tk.Tk()
@@ -20,9 +22,11 @@ def main_menu():
         return
 
     def open_rsa_keygen_menu():
+        keygen_menu()
         return
 
     def open_rsa_operations_menu():
+        rsa_menu()
         return
 
     label = ttk.Label(root, text="Menu Principal", style="TLabel")
