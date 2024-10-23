@@ -7,9 +7,6 @@ def keygen_menu():
     root.title("Geração de Chaves")
     root.geometry("300x300")
 
-    def exit_program():
-        root.quit()
-
     def generate_keys():
         try:
             key_size = int(key_size_var.get())
@@ -54,8 +51,5 @@ def keygen_menu():
 
     button_generate = ttk.Button(root, text="Gerar Chaves", command=generate_keys)
     button_generate.pack(pady=20)
-
-    button_exit = ttk.Button(root, text="Sair", command=exit_program)
-    button_exit.pack(pady=10)
 
     root.mainloop()
