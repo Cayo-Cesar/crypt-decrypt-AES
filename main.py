@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from encrypt_decrypt import aes_menu
 
 def main_menu():
     root = tk.Tk()
@@ -7,6 +8,7 @@ def main_menu():
     root.geometry("400x400")
 
     style = ttk.Style()
+
     style.configure("TButton", font=("Arial", 12), padding=10)
     style.configure("TLabel", font=("Arial", 16), padding=10)
 
@@ -14,6 +16,7 @@ def main_menu():
         root.quit()
 
     def open_aes_menu():
+        aes_menu()
         return
 
     def open_rsa_keygen_menu():
