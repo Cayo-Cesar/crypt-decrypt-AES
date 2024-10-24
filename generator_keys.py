@@ -7,19 +7,23 @@ def keygen_menu():
     root.title("Geração de Chaves")
     root.geometry("300x300")
 
+    # Função para gerar as chaves
     def generate_keys():
         try:
+            # Obtém o tamanho da chave
             key_size = int(key_size_var.get())
             
             if key_size not in [1024, 2048]:
                 raise ValueError("O tamanho da chave deve ser 1024 ou 2048 bits.")
 
+            # Gera as chaves
             private_key = RSA.generate(key_size)
             private_key_pem = private_key.export_key()
 
             public_key = private_key.publickey()
             public_key_pem = public_key.export_key()
 
+            # Salva as chaves em arquivos
             with open("chave_privada.pem", "wb") as f_priv:
                 f_priv.write(private_key_pem)
 
@@ -30,9 +34,10 @@ def keygen_menu():
 
         except Exception as e:
             tk.messagebox.showerror("Erro", str(e))
-
+    # Variável para armazenar o tamanho da chave
     key_size_var = tk.StringVar(value="1024")
 
+    # Tratativas da Interface Gráfica
     style = ttk.Style()
     style.configure("TButton", font=("Arial", 12), padding=10)
     style.configure("TLabel", font=("Arial", 16), padding=10)
