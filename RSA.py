@@ -63,10 +63,11 @@ def rsa_menu():
 
     def verify_rsa_signature():
         try:
+            # Fazem verificação de parametros e arquivos com a assinatura, arquivo a ser verificado e chave pública
             signature_file = filedialog.askopenfilename(title="Selecione o arquivo com a assinatura")
             if not signature_file:
                 raise FileNotFoundError("Arquivo com a assinatura não foi selecionado.")
-
+             
             file_to_verify = filedialog.askopenfilename(title="Selecione o arquivo a ser verificado")
             if not file_to_verify:
                 raise FileNotFoundError("Arquivo a ser verificado não foi selecionado.")
@@ -89,11 +90,13 @@ def rsa_menu():
             with open(signature_file, "r") as f_sign:
                 signature_encoded = f_sign.read()
 
+            # Decodifica a assinatura
             signature = binascii.unhexlify(signature_encoded) if output_format == "HEX" else base64.b64decode(signature_encoded)
 
             with open(file_to_verify, "rb") as f_file:
                 message = f_file.read()
 
+            # Verifica a assinatura
             if sha_version == "256":
                 h = SHA256.new(message)
             elif sha_version == "384":
@@ -101,6 +104,7 @@ def rsa_menu():
             elif sha_version == "512":
                 h = SHA512.new(message)
 
+            # Verifica a assinatura
             pkcs1_15.new(public_key).verify(h, signature)
             messagebox.showinfo("Sucesso", "A assinatura é válida!")
 

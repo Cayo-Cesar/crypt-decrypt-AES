@@ -1,0 +1,8 @@
+Como executar??
+
+Necessario instalar as bibliotecas:
+
+pycryptodome (pip install pycryptodome)
+tkinter (pip install tkinter)
+
+Executar o arquivo main.py, ele gerencia toda a aplicação.
