@@ -17,29 +17,11 @@ Este projeto visa explorar a cifragem e decifragem utilizando o algoritmo AES (A
 - Python 3.x
 - Biblioteca `pycryptodome`
 
-## Instalação
-
-1. Clone o repositório:
-    ```sh
-    git clone https://github.com/Cayo-Cesar/crypt-decrypt-AES.git
-    ```
-2. Navegue até o diretório do projeto:
-    ```sh
-    cd crypt-decrypt-AES
-    ```
-3. Instale as dependências necessárias:
-    ```sh
-    pip install -r requirements.txt
-    ```
-
 ## Uso
 
-1. Execute o script de cifragem:
+1. Execute o script main:
     ```sh
-    python encrypt.py
+    python main.py
     ```
-2. Execute o script de decifragem:
-    ```sh
-    python decrypt.py
-    ```
+
 
