@@ -16,6 +16,7 @@ Este projeto visa explorar a cifragem e decifragem utilizando o algoritmo AES (A
 
 - Python 3.x
 - Biblioteca `pycryptodome`
+- Biblioteca `tkinter`
 
 ## Uso
 
